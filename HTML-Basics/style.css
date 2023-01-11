@@ -1,0 +1,10 @@
+button {
+    background-color: rgb(241, 180, 180);
+}
+
+button:hover {
+  background-color: rgb(236, 180, 240);
+}
+button:focus {
+    color: blueviolet;
+}
