@@ -1,0 +1,19 @@
+.basic {
+    background-color: #e99696;
+    font-family: Verdana, DejaVu Sans, sans-serif;
+}
+
+#one {
+    color: rgba(0, 0, 255, 0.84);
+    font-size: 36px;
+}
+
+.cool {
+    font-size: 24px;
+}
+
+#other {
+    background-color: rgba(0, 150, 0, 0.85);
+    font-size: 24px;
+    font-weight: bold;
+}
