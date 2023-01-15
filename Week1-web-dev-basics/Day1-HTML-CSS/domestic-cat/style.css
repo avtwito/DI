@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.media {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid salmon;
+    margin-top: 3rem;
+}
+
+h4 {
+    color: red;
+    border: 1px solid red;
+    border-radius: 1rem;
+}
+
+.table {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.senses {
+    display: block;
+    margin-left: 2rem;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
