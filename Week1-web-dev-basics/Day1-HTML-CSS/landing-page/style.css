@@ -1,0 +1,71 @@
+li {
+    float: right;
+    
+}
+
+a {
+    display: block;
+    padding: 8px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Rowdies', cursive;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: darkcyan;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav {
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    width: 100%;
+}
+
+li img {
+    max-width: auto;
+    max-height: 48px;
+    position: fixed;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-image: url(thor.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    position: relative;
+    top: 40%;
+    font-size: 60px;
+    color: rgb(34, 49, 6);
+}
+
+p {
+    position: fixed;
+    top: 50%;
+    font-size: large;
+    color: rgb(113, 226, 221);
+}
