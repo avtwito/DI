@@ -1,0 +1,52 @@
+html { 
+    background: url(background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.bottom {
+    border: 2px solid red;
+    height: 500px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
+    gap: 3px 5px;
+}
+
+.top {
+    border: 2px solid rebeccapurple;
+    display: flex;
+    margin-bottom: 1vh;
+    height: 300px;
+}
+
+.top .name {
+    font-size: 3rem;
+}
+
+.top .name span {
+    font-weight: bold;
+}
+
+.bottom div {
+    border: 2px solid blue;
+    background-color: aliceblue;
+}
+
+img {
+    width: 50px;
+}
+
+/* .education {
+    grid-column: 1 / span 2;
+} */
+
+.contact {
+    grid-row: 1/span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
