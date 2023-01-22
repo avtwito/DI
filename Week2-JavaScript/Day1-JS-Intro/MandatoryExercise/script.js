@@ -21,6 +21,7 @@ console.log(myWatchedSeries[myWatchedSeries.lastIndexOf("money heist")][2]);
 
 console.log(myWatchedSeries);
 
+
 // ================Exercise 3================
 const celsiusTemp = 32;
 
