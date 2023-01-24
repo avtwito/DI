@@ -36,3 +36,20 @@ for (let i = 0; i < people.length; i++) {
 
 
 // ============ Exercise 2 ===========
+const colors = ["blue", "red", "yellow", "green", "purple"];
+for (let i = 0, color; (color = colors[i]) && (i < colors.length); i++) {
+    console.log(`My #${i + 1} choice is ${color}`);
+}
+
+// doing the same thing using the right suffix of each number
+const suffixes = {
+    1: "st",
+    2: "nd",
+    3: "th"
+};
+
+for (let i = 1, color; (color = colors[i - 1]) && (i <= colors.length); i++) {
+    if (i < 3) {
+        console.log(`My ${i}${suffixes[i]} choice is `);
+    }
+}
