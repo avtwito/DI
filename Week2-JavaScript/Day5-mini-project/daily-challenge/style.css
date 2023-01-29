@@ -1,8 +1,8 @@
-*{
-    font-family: 'PT Sans', sans-serif;
+* {
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-body{
+body {
     padding: 50px
 }
 
@@ -14,12 +14,15 @@ body{
     display: flex;
     overflow: scroll;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: 70px
+    padding-top: 1em;
+    padding-left: 0.3em;
 }
 
 #typing-container p {
-    font-size: 1.5rem;
+    font-size: 1.6em;
+    line-height: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: 300;
 }

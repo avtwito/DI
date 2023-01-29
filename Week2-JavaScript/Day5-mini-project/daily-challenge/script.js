@@ -1,7 +1,4 @@
 function playTheGame() {
-    if (!(confirm("Would you like to play the game?\nEither OK or Cancel."))) {
-        alert("OK, No problem (in a passive-aggresive tone)");
-    }
     bottleCounter = prompt("Please type-in a number of beers");
     /**
      * @todo: check validity
@@ -25,12 +22,16 @@ function playTheGame() {
             song += `${bottleCounter} bottles of beer on the wall\n`;
         }
     }
+    playSong();
     typeWriter(song);
 }
 
 
 function typeWriter(text) {
-    const outputDiv = document.getElementById("typing-container");
+    // const outputDiv = document.getElementById("typing-container");
+    const outputDiv = document.createElement('div');
+    outputDiv.setAttribute('id', 'typing-container')
+    document.body.appendChild(outputDiv);
     const splitted = text.split(`\n`);
     splitted.forEach(function () {
         const p = document.createElement('p');
@@ -49,13 +50,19 @@ function typeWriter(text) {
                 clearInterval(intervalID);
             }
             // this condition is added in order to skip empty lines
-            if (splitted[currentPara].length === 0) return;
+            // if (splitted[currentPara].length === 0) return;
         }
         
         paras[currentPara].innerHTML += splitted[currentPara][i];
         i++;
 
     }, 50);
+}
+
+function playSong() {
+    const song = document.getElementById("myAudio");
+
+    song.play();
 }
 
 

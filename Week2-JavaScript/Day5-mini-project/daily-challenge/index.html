@@ -7,13 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Game Javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>MiniProject-99 Bottles Of Beer</h1>
     <button onclick="playTheGame()">Click to play the song</button>
 
-    <div id="typing-container"></div>
+    <audio controls id="myAudio">
+        <source src="beer-song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <!-- <div id="typing-container"></div> -->
 
     <script src="script.js"></script>
 </body>
