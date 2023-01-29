@@ -9,7 +9,7 @@ const allBooks = [
         title: "Harry Potter",
         author: "Oh nawwww",
         image: "gay-dumbledore.avif",
-        alreadyRead: true
+        alreadyRead: false
     }
 ];
 
@@ -18,21 +18,25 @@ let row = Array();
 row[0] = bookTable.insertRow(0);
 row[0].setAttribute('class', 'silly');
 row[1] = bookTable.insertRow(1);
-let i = 0;
-for (const key in allBooks[0]) {
-    if (Object.hasOwnProperty.call(allBooks[0], key)) {
-        let addCell = row[0].insertCell(i);
-        addCell.innerHTML = allBooks[0][key];
-        i++;
+let addCell;
+for (let j = 0; j < 2; j++) {
+    for (let i = 0; i < 4; i++) {
+        addCell = row[j].insertCell(i);
+        if (i < 2) {
+            addCell.innerHTML = Object.values(allBooks[j])[i];
+        }
+        else if (i === 2) {
+            const imgElement = document.createElement('img');
+            imgElement.src = Object.values(allBooks[j])[i];
+            console.log(imgElement);
+            addCell.appendChild(imgElement)
+        }
+        else {
+            if (Object.values(allBooks[j])[i]) {
+                row[j].style.backgroundColor = "#8A0013";
+            }
+        }
     }
 }
 
-i = 0;
-for (const key in allBooks[1]) {
-    if (Object.hasOwnProperty.call(allBooks[0], key)) {
-        let addCell = row[1].insertCell(i);
-        addCell.innerHTML = allBooks[1][key];
-        i++;
-    }
-}
 document.getElementsByClassName("listBooks")[0].appendChild(bookTable);
