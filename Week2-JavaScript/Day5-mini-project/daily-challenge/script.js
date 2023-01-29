@@ -6,7 +6,7 @@ function playTheGame() {
     /**
      * @todo: check validity
      */
-    let song = `We start the song at ${bottleCounter} bottles\n\n`;
+    let song = `We start the song at ${bottleCounter} bottles\n`;
     let subtracter = 1;
     while (bottleCounter - subtracter >= 0) {
         song += `${bottleCounter} bottles of beer on the wall\n${bottleCounter} bottles of beer\n`;
@@ -35,7 +35,7 @@ function typeWriter(text) {
     splitted.forEach(function () {
         const p = document.createElement('p');
         outputDiv.appendChild(p);
-    })
+    });
 
     const paras = outputDiv.querySelectorAll('p');
 
@@ -59,12 +59,12 @@ function typeWriter(text) {
 }
 
 
-$('#typing-container').stop().animate({
-    scrollTop: $("#typing-container")[0].scrollHeight
-  }, 15000);
+// $('#typing-container').stop().animate({
+//     scrollTop: $("#typing-container")[0].scrollHeight
+//   }, 15000);
   
-  $('#typing-container').bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
-    if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
-      $('#typing-container').stop().unbind('scroll mousedown DOMMouseScroll mousewheel keyup');
-    }
-  });
+//   $('#typing-container').bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
+//     if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
+//       $('#typing-container').stop().unbind('scroll mousedown DOMMouseScroll mousewheel keyup');
+//     }
+//   });
