@@ -13,9 +13,10 @@ body{
     background: #2b323c;
     color: #fff;
     display: flex;
+    overflow: scroll;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 

@@ -57,3 +57,14 @@ function typeWriter(text) {
 
     }, 50);
 }
+
+
+$('#typing-container').stop().animate({
+    scrollTop: $("#typing-container")[0].scrollHeight
+  }, 15000);
+  
+  $('#typing-container').bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
+    if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
+      $('#typing-container').stop().unbind('scroll mousedown DOMMouseScroll mousewheel keyup');
+    }
+  });
