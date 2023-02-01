@@ -5,14 +5,14 @@
 const colorsArray = [
     "black",
     "silver",
-    "gray",
+    "turquoise",
     "white",
     "maroon",
     "red",
     "purple",
     "fuchsia",
     "green",
-    "lime",
+    "lightcoral",
     "olive",
     "yellow",
     "navy",
@@ -22,10 +22,11 @@ const colorsArray = [
     "blueviolet",
     "brown",
     "cadetblue",
-    "charteuse",
+    "chartreuse",
     "chocolate"
 ]
-let color;
+let colorClickedId;
+let color = "white";
 const leftSection = document.getElementById('left');
 const rightSection = document.getElementById('right');
 //     - loop through the array of color, and for each color create a div
@@ -39,16 +40,20 @@ function createColorBox () {
     for (const color of colorsArray) {
         colorDiv = document.createElement('div');
         colorDiv.style.backgroundColor = color;
+        colorDiv.id = color;
         descriptionSpan = document.createElement('span');
         descriptionSpan.innerText = color;
         descriptionSpan.classList.add("tooltiptext");
+        descriptionSpan.addEventListener("click", retrieveColor);
         colorDiv.appendChild(descriptionSpan);
         colorDiv.classList.add("tooltip");
         colorDiv.addEventListener("click", retrieveColor);
 
         leftSection.appendChild(colorDiv);
-
     }
+    colorClickedId = document.getElementById(color);
+    colorClickedId.classList.add("clicked");
+
 }
 createColorBox();
 
@@ -80,8 +85,14 @@ createGrid();
 // ## retrieveColor
 // - evt target and find the background color
 // - store the color in a variable
-function retrieveColor(eve) {
-    color = eve.target.style.backgroundColor;
+function retrieveColor(event) {
+    colorClickedId.classList.remove("clicked");
+    const backgroundColor = getComputedStyle(event.target).backgroundColor;
+    const element = backgroundColor === "rgb(193, 192, 192)" ? event.target.parentElement : event.target;
+    colorClickedId = element;
+    element.classList.add('clicked');
+    color = element.style.backgroundColor;
+    
 }
 
 // ## addColor
@@ -89,7 +100,6 @@ function retrieveColor(eve) {
 // of the div I click
 function addColor(eve) {
     eve.target.style.backgroundColor = color;
-
 }
 
 let checkIfMouseDown = false;
