@@ -1,0 +1,76 @@
+/* - display the 2 section - display flex, direction row
+- For the pallet section
+    - use grid : 8 rows, each 1 fr
+                3 colums, each 1fr
+- For the grid section
+    - use grid : 24 rows, each 1 fr
+                60 colums, each 1fr */
+/**/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#right {
+    width: 80%;
+    height: 100vh;
+    background-color: #ACADA8;
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(60, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+}
+
+#right>div {
+    border: 0.8px #BBBCB6 solid;
+    background-color: white;
+}
+
+#left {
+    width: 20%;
+    float: left;
+    padding: 1vh;
+    display: grid;
+    height: 100vh;
+    column-gap: 3px;
+    row-gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: #ACADA8;
+}
+
+#left>button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#left>div {
+    border: 1px solid black;
+}
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: silver;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    padding: 3px 2px;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
