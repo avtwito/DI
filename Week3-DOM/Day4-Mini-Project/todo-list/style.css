@@ -1,0 +1,26 @@
+body {
+    display: grid;
+    grid-template-rows: 5vh 1fr 10vh;
+    grid-template-columns: 30vw 40vw 30vw;
+}
+
+form {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.fa-li {
+    display: flex;
+
+    gap: 5px;
+}
+
+.listTasks {
+    grid-column-start: 2;
+    background-color: palevioletred;
+    width: 30vw;
+}
+li {
+    display: flex;
+    justify-content: center;
+}
