@@ -23,17 +23,17 @@ class Zoo:
 
     def sort_animals(self) -> Dict[str, List[str]]:
         self.animals.sort()
-        return {key: list(group) for key, group in groupby(self.animals, lambda x: x[0])}
+        return {key: list(group) for key, group in groupby(self.animals, lambda x: x[0].lower())}
 
     def get_groups(self) -> None:
-        for key, group in self.sort_animals():
-            print(key + ": " + group)
+        for key, group in self.sort_animals().items():
+            print("{}: {}".format(key, group))
 
 
 def main():
     ramat_gan_safari: Zoo = Zoo("Ramat Gan Safari")
     while True:
-        user_command = input("Enter command: add/get/sell/sort/quit")
+        user_command = input("Enter command: add/get/sell/sort/quit\t").lower()
         match user_command:
             case "quit":
                 break
