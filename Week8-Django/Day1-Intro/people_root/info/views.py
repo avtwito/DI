@@ -5,8 +5,9 @@ import json
 
 
 def read_data():
-    with open(r'../../people.json') as f:
-        return json.load(f)
+    with open(r'C:\Users\00002\OneDrive - g.jct.ac.il\Documents\DI-Bootcamp\Week8-Django\Day1-Intro\people.json') as f:
+        data = json.load(f)
+    return data["people"]
 
 
 # Create your views here.
